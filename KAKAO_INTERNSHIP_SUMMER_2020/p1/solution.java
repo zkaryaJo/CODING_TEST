@@ -12,20 +12,15 @@ public class solution {
        		if(numbers[i] < 0 || numbers[i] > 9) return "ERROR";
         
         //3. hand 값 검사
-        if(hand.equals("left")) {
-        	hand = "L";
-        }else if(hand.equals("right")) {
-        	hand = "R";
-        }else {
-        	return "ERROR";
-        }
-        
-        
+        if	(hand.equals("left"))        	hand = "L";
+	else if (hand.equals("right"))         	hand = "R";
+	else 			        	return "ERROR";
+
         //키보드 배열 선언.
         char[][] board = {	{'1','2','3'}, 
-        					{'4','5','6'}, 
-							{'7','8','9'}, 
-							{'*','0','#'} 	}; 
+				{'4','5','6'}, 
+				{'7','8','9'}, 
+				{'*','0','#'} 	}; 
         
         char left_pos 	= '*'; // *
         char right_pos 	= '#'; // #
@@ -98,9 +93,9 @@ public class solution {
         			
         			answer += hand;
         			
-        			if		(hand == "L") 	left_pos = Character.forDigit(numbers[i], 10);
+				if	(hand == "L") 	left_pos = Character.forDigit(numbers[i], 10);
         			else if	(hand == "R") 	right_pos = Character.forDigit(numbers[i], 10);
-        			else 	        		return "ERROR";
+        			else 	        	return "ERROR";
         			
         		}
         		
